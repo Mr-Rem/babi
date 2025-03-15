@@ -207,7 +207,7 @@ function nextPage(page) {
 }
 
 // Function to type text smoothly and trigger speech
-function typeText(element, text, callback = null, speed = 10) {
+function typeText(element, text, callback = null, speed = 50) {
     let i = 0;
     element.innerHTML = ""; // Clear text
 
@@ -229,7 +229,7 @@ function speakText(text, currentPage) {
     if ('speechSynthesis' in window) {
         let utterance = new SpeechSynthesisUtterance(text);
         utterance.lang = "en-US";
-        utterance.rate = 4;
+        utterance.rate = 1;
         utterance.pitch = 1;
         utterance.volume = 1;
 

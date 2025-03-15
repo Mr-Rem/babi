@@ -1,0 +1,203 @@
+/* Base styles (for desktop and larger screens) */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    text-align: center;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden { display: none; }
+
+/* Floating heart animation */
+.heart {
+    position: fixed;
+    font-size: 5rem;
+    color: red;
+    pointer-events: none;
+    animation: floatHearts 5s linear infinite;
+}
+
+@keyframes floatHearts {
+    0% { transform: translateY(100vh) scale(0.5); opacity: 1; }
+    100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+}
+
+/* Emoji animation */
+.emoji {
+    font-size: 4rem;
+    cursor: pointer;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    max-width: 200px;
+    padding: 12px 16px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    margin: 10px;
+}
+
+/* Cupid Button */
+.cupid-btn {
+    background: linear-gradient(45deg, #ff69b4, #ff1493);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 24px;
+    box-shadow: 0 4px 10px rgba(255, 20, 147, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.cupid-btn:hover {
+    background: linear-gradient(45deg, #ff1493, #ff69b4);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(255, 20, 147, 0.5);
+}
+
+/* "No" button escape effect */
+#noButton {
+    position: relative;
+    transition: transform 0.3s ease-out, font-size 0.3s ease-in-out;
+}
+
+/* Responsive image adjustments */
+.img-fluid, .hidden-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+.hidden-image {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Typing text effect */
+.typing-text::after {
+    content: "|";
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Twinkling star effect */
+.star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+
+/* Gift Wrap Styles */
+.gift-box {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.gift-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ff4757;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    transition: opacity 1s ease-in-out;
+    z-index: 2;
+}
+
+.gift-wrap .ribbon {
+    width: 100%;
+    height: 20px;
+    background: #ffbe76;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.gift-wrap .lid {
+    width: 110%;
+    height: 30%;
+    background: #e84118;
+    position: absolute;
+    top: 0;
+    left: -5%;
+    transition: transform 1s ease-in-out;
+    transform-origin: top;
+}
+
+/* Reveal animation */
+.open .lid {
+    transform: rotateX(90deg);
+}
+
+.open .gift-wrap {
+    opacity: 0;
+}
+
+.open .hidden-image {
+    opacity: 1;
+}
+
+/* Mobile & Small Screen Adjustments */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+}

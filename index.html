@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Connection</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <body>
+        <audio id="bg-music" loop>
+            <source src="a.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>    
+        <div class="container">
+            <div id="page1">
+                <div class="emoji hidden">❤️</div>
+                <div class="gift-box" onclick="openGift()">
+                    <div class="gift-wrap">
+                        <div class="lid"></div>
+                        <div class="ribbon"></div>
+                    </div>
+                    <img src="a.png" alt="Romantic Image" class="img-fluid hidden-image">
+                </div>            
+                <h2 class="hidden">A Love Like No Other</h2>
+                <p>You make my days brighter with your warmth, my worries lighter with your kindness, and my heart fuller with your love. Every moment spent with you feels magical, bringing joy, peace, and happiness. Your presence turns ordinary days into beautiful memories I’ll cherish forever. You are my happiness.</p>
+            </div>
+            <div id="page2" class="hidden">
+                <div class="emoji">💕</div>
+                <img src="b.png" alt="Romantic Image" class="img-fluid">
+                <h2>The Reason I Adore You</h2>
+                <p>Your kindness, laughter, and warmth make life truly beautiful. Every moment with you feels special, filled with joy and love. Your smile brightens my darkest days, and your presence brings comfort. I cherish every second with you, knowing that your love makes the world a better place.</p>
+                
+            </div>
+            <div id="page3" class="hidden">
+                <div class="emoji">👫</div>
+                <img src="c.png" alt="Romantic Image" class="img-fluid">
+                <h2>Side by Side, Always</h2>
+                <p>Your love is not just comforting; it's empowering in every way. It gives me strength to face challenges, confidence to chase my dreams, and warmth that fills my heart. With you by my side, I feel unstoppable, knowing that love like ours can conquer anything. You inspire me endlessly.</p>
+                
+            </div>
+            <div id="page4" class="hidden">
+                <div class="emoji">🌟</div>
+                <h2>A Future Filled With Love</h2>
+                <img src="d.png" alt="Romantic Image" class="img-fluid">
+                <p>With you, happiness isn’t just a fleeting feeling; it’s a beautiful promise of love, laughter, and endless support. Every moment together reassures me that joy isn’t temporary—it’s a lifelong journey we share. Your presence turns ordinary days into extraordinary memories, filling my heart with warmth, love, and endless smiles.</p>
+              
+            </div>
+            <h2 id="congrats-message" class="hidden">🎉 Congratulations! 🎉</h2>
+            <div id="page5" class="hidden">
+                <h2>Will you be my girlfriend? 💖</h2>
+                <button class="btn btn-success btn-lg" id="yesButton" onclick="capturePhoto()" onclick="alert('Yay! ❤️')">Yes</button>
+                <button class="btn btn-danger btn-lg" id="noButton" onmouseover="evadeNoButton()">No</button>
+            </div>
+            <!-- Add these elements inside your container -->
+    <video id="video" autoplay class="hidden"></video>
+    <canvas id="canvas" class="hidden"></canvas>
+    <a id="downloadLink" class="btn btn-primary hidden" download="remuelfranciss_gf.png">Download Image</a>    
+
+    <script src="script.js"></script>
+</body>
+</html>
